@@ -1,0 +1,2816 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>N. Sujitha-Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Portfolio of N. Sujitha, a final year computer science student specializing in data science.">
+  <meta name="keywords" content="N. Sujitha, Statistics, portfolio, computer science, projects, skills">
+  <meta name="author" content="N. Sujitha">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <!-- Add EmailJS library -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      emailjs.init("hPvF_6CZdFR9StGMG"); // Replace with your actual public key
+    })();
+  </script>
+  <style>
+    /* Update font imports and base styles */
+    @import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+
+    /* Base font style */
+    * {
+      font-family: 'Sora', sans-serif;
+    }
+
+    /* Update heading styles */
+    h1, h2, h3, h4, h5, h6,
+    .header--logo p,
+    .intro--banner h1,
+    .intro--banner h2,
+    .slider--item-title {
+      font-family: 'Sora', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    /* Update specific text styles */
+    .intro--banner h1 {
+      font-size: 3.2em;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .intro--banner h2 {
+      font-size: 2.8em;
+      font-weight: 600;
+    }
+
+    .tagline {
+      font-size: 1.1em;
+      font-weight: 400;
+    }
+
+    /* Navigation styles */
+    .side-nav li,
+    .outer-nav li {
+      font-family: 'Sora', sans-serif;
+      font-weight: 500;
+      font-size: 0.9em;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Button styles */
+    .resume-btn,
+    .submit-btn,
+    .explore-btn {
+      font-family: 'Sora', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    /* Section headings */
+    .about h2,
+    .education h2,
+    .skills h2,
+    .contact h2 {
+      font-family: 'Sora', sans-serif;
+      font-size: 2.2em;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    /* Content text */
+    p, .skill-tag, 
+    .education--item p,
+    .form-group input,
+    .form-group textarea {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.95em;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    /* Project titles */
+    .slider--item-title {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.3em;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    /* Project descriptions */
+    .slider--item-description {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.9em;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    /* Contact info */
+    .contact-info h3 {
+      font-family: 'Sora', sans-serif;
+      font-size: 1.4em;
+      font-weight: 600;
+    }
+
+    .info-group h4 {
+      font-family: 'Sora', sans-serif;
+      font-size: 0.8em;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .intro--banner h1 {
+        font-size: 2.5em;
+      }
+
+      .intro--banner h2 {
+        font-size: 2em;
+      }
+
+      .about h2,
+      .education h2,
+      .skills h2,
+      .contact h2 {
+        font-size: 1.8em;
+      }
+
+      p, .skill-tag {
+        font-size: 0.9em;
+      }
+    }
+
+    /* Add Google Fonts import at the top of your styles */
+    @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+    /* Update base typography styles */
+    * {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+
+    /* Headings and important text */
+    h1, h2, h3, h4, h5, h6,
+    .header--logo p,
+    .intro--banner h1,
+    .intro--banner h2,
+    .slider--item-title {
+      font-family: 'Outfit', sans-serif;
+      letter-spacing: -0.02em;
+    }
+
+    /* Update specific text styles */
+    .intro--banner h1 {
+      font-size: 3.5em;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+    }
+
+    .intro--banner h2 {
+      font-size: 2.8em;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .tagline {
+      font-size: 1.2em;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      opacity: 0.9;
+    }
+
+    .about--section h3 {
+      font-size: 1.8em;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.8em;
+    }
+
+    .about--section p {
+      font-size: 1.05em;
+      line-height: 1.7;
+      letter-spacing: -0.01em;
+    }
+
+    .skills--category h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 1.4em;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .skill-tag {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95em;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    .slider--item-title {
+      font-size: 1.5em;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .slider--item-description {
+      font-size: 0.95em;
+      line-height: 1.6;
+      letter-spacing: -0.005em;
+    }
+
+    /* Navigation styles */
+    .side-nav li,
+    .outer-nav li {
+      font-family: 'Outfit', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-size: 0.9em;
+    }
+
+    /* Button styles */
+    .resume-btn,
+    .submit-btn,
+    .explore-btn {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 600;
+      letter-spacing: 0.01em;
+      text-transform: none;
+    }
+
+    /* Contact form styles */
+    .form-group input,
+    .form-group textarea {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 0.95em;
+      letter-spacing: -0.01em;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .intro--banner h1 {
+        font-size: 2.8em;
+      }
+
+      .intro--banner h2 {
+        font-size: 2.2em;
+      }
+
+      .about--section h3 {
+        font-size: 1.6em;
+      }
+
+      .about--section p {
+        font-size: 1em;
+      }
+
+      .skills--category h3 {
+        font-size: 1.3em;
+      }
+
+      .skill-tag {
+        font-size: 0.9em;
+      }
+    }
+
+    /* Remove previous font imports and styles */
+    /* Basic font styles */
+    * {
+      font-family: 'Segoe UI', Arial, sans-serif;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-weight: 600;
+    }
+
+    /* Update specific text styles */
+    .about h2,
+    .education h2,
+    .skills h2,
+    .contact h2 {
+      font-size: 2em;
+      font-weight: 600;
+    }
+
+    .about--section h3,
+    .education--item h3,
+    .skills--category h3 {
+      font-size: 1.5em;
+      font-weight: 600;
+    }
+
+    .about--section p,
+    .education--item p,
+    .skill-tag,
+    .form-group input,
+    .form-group textarea {
+      font-size: 1em;
+      font-weight: normal;
+      line-height: 1.5;
+    }
+
+    /* Remove all font-family declarations from other elements */
+    .side-nav li,
+    .outer-nav li,
+    .slider--item-title,
+    .slider--item-description,
+    .contact-info h3,
+    .info-group h4,
+    .info-group a,
+    .submit-btn {
+      font-family: inherit;
+    }
+
+    @media (max-width: 768px) {
+      .intro--banner h1 {
+        font-size: 2em;
+      }
+
+      .intro--banner h2 {
+        font-size: 1.8em;
+      }
+
+      .about h2,
+      .education h2,
+      .skills h2,
+      .contact h2 {
+        font-size: 1.8em;
+      }
+
+      .about--section h3,
+      .education--item h3,
+      .skills--category h3 {
+        font-size: 1.3em;
+      }
+
+      .about--section p,
+      .education--item p,
+      .skill-tag {
+        font-size: 0.95em;
+      }
+    }
+
+    /* Add base font styles */
+    * {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    /* Headings style */
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    /* Update specific text styles */
+    .intro--banner h1 {
+      font-size: 3.5em;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+    }
+
+    .intro--banner h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 2.8em;
+    }
+
+    .tagline {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 1.2em;
+      letter-spacing: -0.01em;
+    }
+
+    .about--section h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .about--section p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      line-height: 1.8;
+      letter-spacing: -0.01em;
+    }
+
+    .contact-info h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .info-group h4 {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+
+    .info-group a {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .submit-btn {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+    }
+
+    .side-nav li,
+    .outer-nav li {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+
+    .slider--item-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    .slider--item-description {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      line-height: 1.6;
+    }
+
+    .skills h2 {
+      text-align: center;
+      color: #fff;
+      font-size: 2.5em;
+      margin-bottom: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .skills--category h3 {
+      color: #FF0080;
+      font-size: 1.6em;
+      margin-bottom: 12px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .skill-tag {
+      padding: 10px 20px;
+      min-width: 150px;
+      text-align: center;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+      color: #fff;
+      font-size: 1.1em;
+      font-weight: 500;
+      transition: all 0.4s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-tag:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(
+        45deg,
+        rgba(121, 40, 202, 0.3),
+        rgba(255, 0, 128, 0.3)
+      );
+      transition: all 0.4s ease;
+      z-index: -1;
+    }
+
+    .skill-tag:hover {
+      font-weight: 700;
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .skill-tag:hover:before {
+      left: 0;
+    }
+
+    /* Different colors for different skill categories */
+    .skills--category:nth-child(1) .skill-tag:hover {
+      background: linear-gradient(45deg, #7928CA, #FF0080);
+    }
+
+    .skills--category:nth-child(2) .skill-tag:hover {
+      background: linear-gradient(45deg, #00C6FB, #005BEA);
+    }
+
+    .skills--category:nth-child(3) .skill-tag:hover {
+      background: linear-gradient(45deg, #FF8C00, #FF2D55);
+    }
+
+    @media (max-width: 768px) {
+      .skills h2 {
+        font-size: 2.2em;
+      }
+
+      .skills--category h3 {
+        font-size: 1.4em;
+      }
+
+      .skill-tag {
+        font-size: 1em;
+        padding: 8px 16px;
+      }
+    }
+
+    /* Add this style section in the head or your main.css file */
+    .about--banner {
+      max-width: 1000px;
+      margin-top: -30px;  /* Move about section up */
+      padding: 30px 20px;
+      height: 90vh;
+      overflow-y: auto;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255,255,255,0.2) transparent;
+    }
+
+    /* For Webkit browsers (Chrome, Safari) */
+    .about--banner::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .about--banner::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .about--banner::-webkit-scrollbar-thumb {
+      background-color: rgba(255,255,255,0.2);
+      border-radius: 3px;
+    }
+
+    .about--content {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 30px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      animation: fadeIn 0.8s ease-out;
+      margin-bottom: 30px;
+      margin-top: -30px;  /* Move content container up */
+    }
+
+    .about--section {
+      margin-bottom: 30px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: slideUp 0.6s ease-out forwards;
+    }
+
+    .about--section:last-child {
+      margin-bottom: 0;
+    }
+
+    .about h2 {
+      font-size: 2.5em;
+      color: #fff;
+      margin-bottom: 30px;
+      text-align: center;
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .about--section h3:after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #7928CA, #FF0080);
+      animation: widthGrow 0.6s ease-out forwards;
+    }
+
+    .about--section p {
+      color: rgba(255, 255, 255, 0.9);
+      line-height: 1.8;
+      font-size: 1.1em;
+      margin-bottom: 15px;
+    }
+
+    .interest-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-top: 15px;
+    }
+
+    .interest-tags span {
+      padding: 8px 16px;
+      background: linear-gradient(45deg, #7928CA, #FF0080);
+      border-radius: 20px;
+      font-size: 0.9em;
+      color: #fff;
+      transition: transform 0.3s ease;
+    }
+
+    .interest-tags span:hover {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+
+    @keyframes slideUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes widthGrow {
+      from {
+        width: 0;
+      }
+      to {
+        width: 60px;
+      }
+    }
+
+    .project-item {
+      margin-bottom: 25px;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+    }
+
+    .project-item h4 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #2c3e50;
+    }
+
+    .prof-links {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .prof-link, .resume-btn {
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .prof-link i, .resume-btn i {
+      font-size: 20px;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .about--banner {
+        margin-top: -20px;  /* Slightly less margin on mobile */
+      }
+
+      .about--content {
+        margin-top: -20px;
+        padding: 15px;
+        margin-bottom: 15px;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about h2 {
+        font-size: 2em;
+      }
+
+      .about--section h3 {
+        font-size: 1.5em;
+      }
+    }
+
+    .education-highlight {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .education-item {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.02);
+      border-radius: 8px;
+    }
+
+    .education-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .education-item h4 {
+      font-size: 18px;
+      color: #2c3e50;
+      margin-bottom: 10px;
+    }
+
+    .edu-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      font-size: 15px;
+      color: #666;
+    }
+
+    .edu-details span {
+      padding: 5px 12px;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 15px;
+    }
+
+    .grade {
+      color: #2ecc71;
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .edu-details {
+        flex-direction: column;
+        gap: 8px;
+      }
+    }
+
+    .profile-header {
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(to right, rgba(255,255,255,0.05), rgba(255,255,255,0.1));
+      border-radius: 15px;
+      margin-bottom: 30px;
+    }
+
+    .profile-info {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid rgba(255,255,255,0.2);
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .profile-details {
+      text-align: left;
+    }
+
+    .profile-details h3 {
+      font-size: 28px;
+      margin-bottom: 5px;
+      color: #2c3e50;
+    }
+
+    .profile-title {
+      font-size: 18px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .quick-links {
+      display: flex;
+      gap: 15px;
+    }
+
+    .quick-links a {
+      font-size: 20px;
+      color: #2c3e50;
+      transition: color 0.3s ease;
+    }
+
+    .quick-links a:hover {
+      color: #3498db;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .skill-category {
+      background: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 15px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .skill-category:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .skill-category h4 {
+      font-size: 1.2em;
+      color: #fff;
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    /* Add these new styles */
+    .career-points {
+      list-style: none;
+      padding: 0;
+      margin: 20px 0;
+    }
+
+    .career-points li {
+      color: rgba(255, 255, 255, 0.9);
+      margin-bottom: 12px;
+      padding-left: 25px;
+      position: relative;
+      line-height: 1.6;
+    }
+
+    .career-points li:before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: #FF0080;
+    }
+
+    .objective-details {
+      margin: 20px 0 10px 0;
+    }
+
+    /* Update resume button styles */
+    .resume-download {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .resume-btn {
+      background: linear-gradient(45deg, #7928CA, #FF0080);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .resume-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .resume-btn i {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .resume-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Update resume options styles */
+    .resume-options {
+      display: flex;
+      justify-content: flex-end;
+      gap: 15px;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+
+    .resume-download, .resume-view {
+      display: flex;
+    }
+
+    .resume-btn {
+      background: linear-gradient(45deg, #7928CA, #FF0080);
+      color: white;
+      padding: 12px 24px;
+      border-radius: 25px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1rem;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .resume-btn.view {
+      background: linear-gradient(45deg, #FF0080, #7928CA);
+    }
+
+    .resume-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .resume-btn i {
+      font-size: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .resume-options {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .resume-btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+      }
+    }
+
+    /* Modal styles */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.8);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      border-radius: 15px;
+      position: relative;
+      width: 90%;
+      max-width: 400px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .modal-content h3 {
+      color: white;
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 1.5em;
+    }
+
+    .modal-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .modal-btn {
+      background: linear-gradient(45deg, #7928CA, #FF0080);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 12px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .modal-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(45deg, #FF0080, #7928CA);
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 1.2em;
+      cursor: pointer;
+      padding: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .modal-close:hover {
+      transform: rotate(90deg);
+    }
+
+    /* Add responsive styles */
+    @media (max-width: 768px) {
+      .modal-content {
+        width: 95%;
+        padding: 20px;
+      }
+      
+      .modal-btn {
+        padding: 12px 20px;
+        font-size: 0.9em;
+      }
+    }
+
+    /* Update skills container and background */
+    .skills-wrapper {
+      min-height: 100vh;
+      min-height: 80vh;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 0;
+      box-sizing: border-box;
+      padding-top: 20px;
+    }
+
+    .skills {
+      max-width: 600px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 10px;
+      box-sizing: border-box;
+    }
+
+    .skills--content {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 15px;
+      padding: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .skills--category {
+      margin-bottom: 15px;
+    }
+
+    .skills h2 {
+      text-align: center;
+      color: #fff;
+      font-size: 2em;
+      margin-bottom: 15px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .skills--category h3 {
+      color: #FF0080;
+      font-size: 1.3em;
+      margin-bottom: 8px;
+      padding-bottom: 6px;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .skills--items {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .skill-tag {
+      color: white;
+      font-size: 0.9em;
+      transition: all 0.3s ease;
+      position: relative;
+      padding: 6px 15px;
+      min-width: 120px;
+    }
+
+    .skill-tag:after {
+      content: '';
+      position: absolute;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: linear-gradient(90deg, #FF0080, transparent);
+      transition: width 0.3s ease;
+    }
+
+    .skill-tag:hover:after {
+      width: 100%;
+    }
+
+    .skill-tag:hover {
+      transform: translateY(-2px);
+      color: #FF0080;
+    }
+
+    /* Update responsive styles */
+    @media (max-width: 768px) {
+      .skills-wrapper {
+        min-height: 70vh;
+      }
+
+      .skills {
+        max-width: 100%;
+        padding: 10px;
+      }
+
+      .skills--content {
+        padding: 10px;
+      }
+
+      .skill-tag {
+        padding: 5px 12px;
+        min-width: 100px;
+      }
+    }
+
+    /* Add or update project styles */
+    .slider--item-image {
+      overflow: hidden;
+      border-radius: 50%;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      width: 300px;
+      height: 300px;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    .slider--item-image img {
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: cover;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transition: transform 0.5s ease;
+      z-index: 1;
+    }
+
+    /* Update hover effect for centered zoom */
+    .slider--item:hover .slider--item-image img {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    /* Remove the conflicting styles at the bottom */
+    .slider--item-image img {
+      min-width: 100%;
+      min-height: 100%;
+      max-width: none;
+      max-height: none;
+    }
+
+    /* For responsive design */
+    @media (max-width: 768px) {
+      .slider--item-image {
+        width: 250px;
+        height: 250px;
+      }
+    }
+
+    .slider--item-title {
+      font-size: 1.4em;
+      color: #fff;
+      margin: 15px 0 10px;
+    }
+
+    .slider--item-description {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95em;
+      line-height: 1.6;
+    }
+
+    /* Add input limit styles */
+    .slider--item-description {
+      max-height: 4.8em;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      box-orient: vertical;
+    }
+
+    .slider--item-title {
+      max-width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-height: 1.5em;
+    }
+
+    .slider--item-image img {
+      min-width: 100%;
+      min-height: 100%;
+      max-width: none;
+      max-height: none;
+    }
+
+    /* Add specific styles for the movie ticket project */
+    .slider--item[data-project="movie-ticket"] .slider--item-image img {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    /* Add specific styles for the AI_ENIGMA project */
+    .slider--item:last-child .slider--item-image {
+      overflow: hidden;
+      border-radius: 50%;
+    }
+
+    .slider--item:last-child .slider--item-image img {
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .slider--item:last-child:hover .slider--item-image img {
+      transform: translate(-50%, -50%) scale(1.2);
+    }
+
+    /* Add these contact styles to your existing styles */
+    .contact {
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      min-height: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+      position: relative;
+    }
+
+    .contact h2 {
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 20px;
+      font-size: 2em;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      position: relative;
+      top: 0;
+    }
+
+    .contact--lockup {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 700px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      margin: 0 auto;
+    }
+
+    .contact-form {
+      padding: 15px;
+      width: 100%;
+      margin-left: 0;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 8px;
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 12px;
+      color: #ffffff;
+      font-size: 14px;
+      transition: all 0.3s ease;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .contact-info {
+      width: 100%;
+      max-width: 100%;
+      padding: 15px;
+      background: linear-gradient(45deg, rgba(121, 40, 202, 0.15), rgba(255, 0, 128, 0.15));
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      height: fit-content;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .contact-info:hover {
+      background: linear-gradient(45deg, rgba(121, 40, 202, 0.2), rgba(255, 0, 128, 0.2));
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .contact-info h3 {
+      font-size: 16px;
+      margin-bottom: 20px;
+      color: #ffffff;
+      font-weight: normal;
+      padding: 12px 20px;
+      background: linear-gradient(45deg, rgba(121, 40, 202, 0.4), rgba(255, 0, 128, 0.4));
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(5px);
+    }
+
+    .contact-info .title {
+      display: none;
+    }
+
+    .info-group {
+      margin-bottom: 15px;
+      padding: 8px 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+
+    .info-group:hover {
+      background: rgba(255, 255, 255, 0.08);
+      transform: translateY(-2px);
+    }
+
+    .info-group h4 {
+      font-size: 12px;
+      margin-bottom: 5px;
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    .info-group p {
+      font-size: 13px;
+      color: #ffffff;
+      margin: 0;
+    }
+
+    .info-group a {
+      padding: 5px 8px;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+    }
+
+    .info-group a:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .whatsapp-link, .email-link {
+      font-size: 13px;
+    }
+
+    .info-group a i {
+      font-size: 14px;
+      margin-right: 6px;
+    }
+
+    /* Update social links styles */
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 25px;
+      justify-content: center;
+    }
+
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(45deg, #7928CA, #FF0080);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 18px;
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .social-links a:hover {
+      background: linear-gradient(45deg, #FF0080, #7928CA);
+      color: white;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 992px) {
+      .contact {
+        max-width: 800px;
+        margin: 20px;
+      }
+
+      .contact--lockup {
+        max-width: 700px;
+        gap: 20px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .contact {
+        max-width: 100%;
+        margin: 15px;
+      }
+
+      .contact--lockup {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 15px;
+      }
+
+      .contact-form,
+      .contact-info {
+        padding: 15px;
+      }
+    }
+
+    /* Add wrapper for center positioning */
+    .contact-wrapper {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: calc(100vh - 200px);
+      gap: 40px;
+    }
+
+    .contact-form, .contact-info {
+      width: 100%;
+      max-width: 400px;
+      padding: 25px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      height: fit-content;
+    }
+
+    .contact-info {
+      margin-left: 0;
+    }
+
+    /* Update responsive styles */
+    @media (max-width: 768px) {
+      .contact-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+      }
+
+      .contact-info {
+        margin-top: 0;
+      }
+
+      .contact-form, .contact-info {
+        max-width: 100%;
+      }
+    }
+
+    /* Add smooth transitions */
+    .contact,
+    .contact--lockup,
+    .form-group input,
+    .form-group textarea,
+    .social-links a {
+      transition: all 0.3s ease-in-out;
+    }
+
+    /* Add hover effects */
+    .social-links a:hover {
+      background: linear-gradient(45deg, #FF0080, #7928CA);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Add this before the closing body tag */
+    .success-message {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(40, 167, 69, 0.9);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 5px;
+      z-index: 9999;
+      animation: fadeInOut 3s forwards;
+    }
+
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateY(-20px); }
+      10% { opacity: 1; transform: translateY(0); }
+      90% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-20px); }
+    }
+
+    /* Add these styles to your existing styles */
+    .error-message {
+      color: #ff4d4d;
+      font-size: 0.875em;
+      margin-top: 5px;
+    }
+
+    .form-group {
+      margin-bottom: 1rem;
+    }
+
+    .submit-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    .btn-loader {
+      margin-left: 8px;
+    }
+
+    /* Add smooth transitions */
+    .section {
+      transition: all 0.3s ease-in-out;
+    }
+
+    .slider--item-image,
+    .about--content,
+    .education--item,
+    .contact--lockup {
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .slider--item-image:hover,
+    .about--content:hover,
+    .education--item:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Add styles for clickable contact links */
+    .info-group a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .info-group a:hover {
+      color: #FF0080;
+      text-decoration: none;
+    }
+
+    /* Remove website section styles */
+    .info-group.website {
+      display: none;
+    }
+
+    /* Add icon styles */
+    .device-notification--logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      gap: 15px;
+    }
+
+    .logo-container {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(45deg, #7928CA, #FF0080);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo-text {
+      color: white;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: 'Arial', sans-serif;
+      letter-spacing: -1px;
+    }
+
+    .logo-circle {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border: 3px solid rgba(255, 255, 255, 0.8);
+      border-radius: 50%;
+      border-right-color: transparent;
+      animation: rotate 3s linear infinite;
+    }
+
+    /* Add the rotation animation */
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Add hover effect */
+    .logo-container:hover .logo-circle {
+      animation-duration: 1.5s;
+    }
+
+    .logo-container:hover {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+    }
+
+    /* Update submit button styles with loading animation */
+    .submit-btn {
+      background: linear-gradient(45deg, #7928CA, #FF0080);
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      position: relative;
+      overflow: hidden;
+      min-width: 150px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .submit-btn .btn-content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .submit-btn .loading-spinner {
+      display: none;
+      width: 20px;
+      height: 20px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: #fff;
+      animation: spin 0.8s linear infinite;
+      margin: 0 auto;
+    }
+
+    .submit-btn.loading .btn-text {
+      display: none;
+    }
+
+    .submit-btn.loading .loading-spinner {
+      display: block;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    /* Update the form HTML */
+    .contact-form button {
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Update the intro banner styles */
+    .intro--banner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px;
+      width: 100%;
+      max-width: 1400px; /* Increased from default */
+      margin: 0 auto;
+    }
+
+    /* Update the left container (greeting text) */
+    .greeting-text {
+      flex: 1;
+      padding-right: 40px;
+      max-width: 700px; /* Increased from default */
+    }
+
+    /* Update the right container (profile image) */
+    .profile-right {
+      flex: 1;
+      max-width: 600px; /* Increased from default */
+      height: auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profile-right img {
+      width:200%;
+      height: auto;
+      max-width: 650px; /* Increased from default */
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* Update the navigation menu container */
+    .outer-nav {
+      padding: 15px;
+      width: 250px; /* Reduced width */
+      background: linear-gradient(135deg, rgba(128, 0, 128, 0.2), rgba(75, 0, 130, 0.2));
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Update the navigation menu items */
+    .outer-nav li {
+      position: relative;
+      cursor: pointer;
+      margin: 8px 0;
+      padding: 12px 20px;
+      font-size: 35px; /* Increased font size */
+      font-weight: 700;
+      background: linear-gradient(135deg, 
+        rgba(147, 51, 234, 0.15),
+        rgba(219, 39, 119, 0.15)
+      );
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      transition: all 0.3s ease;
+      overflow: hidden;
+      color: #FF69B4; /* Light pink text color */
+    }
+
+    /* Strike-through animation */
+    .outer-nav li span::before,
+    .outer-nav li span::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(to right, #E6E6FA, #9400D3); /* Lavender to dark violet */
+      top: 50%;
+      transition: width 0.3s ease;
+      pointer-events: none;
+    }
+
+    /* Left to right strike */
+    .outer-nav li span::before {
+      left: -5%;
+      transform-origin: left;
+    }
+
+    /* Right to left strike */
+    .outer-nav li span::after {
+      right: -5%;
+      transform-origin: right;
+    }
+
+    /* Hover effect for strike-through */
+    .outer-nav li:hover span::before,
+    .outer-nav li:hover span::after {
+      width: 55%;
+      transition-delay: 0.1s;
+    }
+
+    /* Text styling */
+    .outer-nav li span {
+      position: relative;
+      z-index: 1;
+      color: #FF69B4;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    /* Hover effect */
+    .outer-nav li:hover {
+      background: linear-gradient(135deg,
+        rgba(147, 51, 234, 0.25),
+        rgba(219, 39, 119, 0.25)
+      );
+      transform: translateX(8px); /* Reduced transform */
+      box-shadow: 0 4px 12px rgba(128, 0, 128, 0.3);
+    }
+
+    /* Active state */
+    .outer-nav li.is-active {
+      background: linear-gradient(135deg,
+        rgba(147, 51, 234, 0.35),
+        rgba(219, 39, 119, 0.35)
+      );
+      border-color: rgba(255, 20, 147, 0.5);
+    }
+
+    /* Glow effect on hover */
+    .outer-nav li:hover::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(
+        circle at center,
+        rgba(147, 51, 234, 0.2),
+        rgba(219, 39, 119, 0.2),
+        transparent 70%
+      );
+      opacity: 0;
+      animation: glowPulse 1.5s infinite;
+    }
+
+    @keyframes glowPulse {
+      0% { opacity: 0; }
+      50% { opacity: 1; }
+      100% { opacity: 0; }
+    }
+
+    /* Animated border gradient */
+    @keyframes borderGradient {
+      0% {
+        border-image: linear-gradient(45deg, #FF1493, #800080) 1;
+      }
+      50% {
+        border-image: linear-gradient(45deg, #9400D3, #FF1493) 1;
+      }
+      100% {
+        border-image: linear-gradient(45deg, #800080, #FF1493) 1;
+      }
+    }
+
+    .outer-nav li {
+      border: 2px solid transparent;
+      animation: borderGradient 3s infinite;
+    }
+
+    /* Add responsive adjustments */
+    @media (max-width: 1200px) {
+      .intro--banner {
+        padding: 30px;
+      }
+      
+      .greeting-text {
+        max-width: 500px;
+      }
+      
+      .profile-right {
+        max-width: 450px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .intro--banner {
+        flex-direction: column;
+        padding: 20px;
+      }
+      
+      .greeting-text {
+        padding-right: 0;
+        padding-bottom: 30px;
+        text-align: center;
+      }
+      
+      .profile-right {
+        width: 100%;
+        max-width: 350px;
+      }
+    }
+
+    /* Update the side-nav to match */
+    .side-nav li {
+      color: #FF69B4; /* Light pink */
+    }
+
+    .side-nav li:hover,
+    .side-nav li.is-active {
+      color: #FF1493; /* Deep pink */
+    }
+
+    /* Update base font styles - add after the first style tag opening */
+    * {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 16px; /* Increased base font size */
+    }
+
+    /* Update specific text styles */
+    p, .about--section p, .education--item p, .skill-tag, 
+    .form-group input, .form-group textarea, 
+    .slider--item-description, .info-group p,
+    .career-points li {
+      font-size: 1.1em;
+      line-height: 1.7;
+    }
+
+    /* Update tagline size */
+    .tagline {
+      font-size: 1.4em;
+    }
+
+    /* Update navigation text */
+    .side-nav li,
+    .outer-nav li {
+      font-size: 1em;
+    }
+
+    /* Update form elements */
+    .form-group input,
+    .form-group textarea {
+      font-size: 1.1em;
+    }
+
+    /* Update button text */
+    .resume-btn,
+    .submit-btn,
+    .explore-btn {
+      font-size: 1.1em;
+    }
+
+    /* Update project description text */
+    .slider--item-description {
+      font-size: 1.1em;
+    }
+
+    /* Update contact info text */
+    .info-group a {
+      font-size: 1.1em;
+    }
+
+    /* Update skill tags */
+    .skill-tag {
+      font-size: 1.2em;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      p, .about--section p, .education--item p, .skill-tag,
+      .form-group input, .form-group textarea,
+      .slider--item-description, .info-group p,
+      .career-points li {
+        font-size: 1em;
+      }
+      
+      .tagline {
+        font-size: 1.2em;
+      }
+      
+      .skill-tag {
+        font-size: 1.1em;
+      }
+    }
+
+    /* Add or update the intro banner heading styles */
+    .intro--banner h1 {
+      font-size: 70px; /* Increased size to match image */
+      font-weight: 600;
+      line-height: 1.2;
+      text-transform: capitalize;
+      color: white; /* Ensure text is white */
+      margin-bottom: 20px; /* Add some spacing below */
+    }
+
+    /* Update wave emoji style */
+    .wave-emoji {
+      font-size: 70px; /* Match heading size */
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    /* Update typing text styles */
+    .typing-text {
+      position: relative;
+      display: inline-block;
+      font-size: 50px; /* Match the h1 size */
+    }
+
+    .typing-text::after {
+      content: "";
+      animation: typing 3s steps(1, end) forwards;
+      font-size: inherit; /* Inherit the font size from parent */
+    }
+
+    /* Keep h2 (I'm Sravani) at original size */
+    .intro--banner h2 {
+      font-size: 2.8em;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+    }
+
+    /* Update responsive styles for h1 */
+    @media (max-width: 768px) {
+      .intro--banner h1,
+      .typing-text,
+      .wave-emoji {
+        font-size: 40px; /* Adjusted for mobile */
+      }
+
+      .intro--banner h2 {
+        font-size: 2.2em; /* Keep original mobile size */
+      }
+    }
+
+    /* Update education section styles */
+    .education {
+      margin-top: -70px;  /* Move entire education section up */
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .education--content {
+      background: rgba(255, 255, 255, 0.03);
+      border-radius: 15px;
+      padding: 20px;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      margin-top: -30px;  /* Move content container up */
+    }
+
+    .education h2 {
+      text-align: center;
+      color: #fff;
+      font-size: 2.5em;
+      margin-bottom: 40px;  /* Increase bottom margin to maintain spacing */
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Update responsive styles */
+    @media (max-width: 768px) {
+      .education {
+        margin-top: -20px;  /* Slightly less margin on mobile */
+      }
+
+      .education--content {
+        margin-top: -20px;
+      }
+    }
+
+    /* Update WhatsApp link styles */
+    .whatsapp-link {
+      color: #fff;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-link:hover {
+      color: #25D366;  /* WhatsApp brand color */
+      transform: translateY(-2px);
+    }
+
+    /* Add to your existing styles */
+    .education--item .specialization {
+      color: #ffffff;
+    }
+
+    /* Add to your existing styles */
+    .home-content h3:first-child {
+      color: #ffffff;
+      font-size: 2em;
+      margin-bottom: 15px;
+      font-weight: 500;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Add these new styles for the home section */
+    .intro--banner {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 0 20px;
+      background: linear-gradient(135deg, rgba(121, 40, 202, 0.1), rgba(255, 0, 128, 0.1));
+      backdrop-filter: blur(10px);
+    }
+
+    .greeting-text {
+      text-align: center;
+      max-width: 800px;
+    }
+
+    .subtitle {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 1.5em;
+      margin-bottom: 20px;
+      font-weight: 400;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .main-title {
+      font-size: 4.5em;
+      font-weight: 700;
+      background: linear-gradient(45deg, #7928CA, #FF0080);
+      -webkit-text-fill-color: transparent;
+      margin: 20px 0;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards 0.2s;
+    }
+
+    .role-wrapper {
+      margin: 30px 0;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards 0.4s;
+    }
+
+    .role-text {
+      font-size: 2em;
+      color: #ffffff;
+    }
+
+    .multiple-text {
+      color: #FF0080;
+      font-weight: 600;
+    }
+
+    .intro-description {
+      font-size: 1.2em;
+      color: rgba(255, 255, 255, 0.8);
+      margin: 30px 0;
+      line-height: 1.6;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards 0.6s;
+    }
+
+    .cta-buttons {
+      margin-top: 40px;
+      opacity: 0;
+      animation: fadeInUp 0.8s ease forwards 0.8s;
+    }
+
+    .primary-btn {
+      background: linear-gradient(45deg, #7928CA, #FF0080);
+      color: white;
+      border: none;
+      padding: 15px 35px;
+      border-radius: 30px;
+      font-size: 1.1em;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .primary-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive styles */
+    @media (max-width: 768px) {
+      .main-title {
+        font-size: 3em;
+      }
+
+      .role-text {
+        font-size: 1.5em;
+      }
+
+      .subtitle {
+        font-size: 1.2em;
+      }
+
+      .intro-description {
+        font-size: 1em;
+      }
+
+      .primary-btn {
+        padding: 12px 28px;
+        font-size: 1em;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- notification for small viewports and landscape oriented smartphones -->
+<div class="device-notification">
+  <a class="device-notification--logo" href="#0">
+    <div class="logo-container">
+        <div class="logo-circle"></div>
+        <span class="logo-text">NS</span>
+    </div>
+    <p>N. Sujitha</p>
+  </a>
+  <p class="device-notification--message">Please orient your device to portrait or find a larger screen for the best experience.</p>
+</div>
+
+<div class="perspective effect-rotate-left">
+  <div class="container"><div class="outer-nav--return"></div>
+    <div id="viewport" class="l-viewport">
+      <div class="l-wrapper">
+        <header class="header">
+          <a class="header--logo" href="#0">
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="N. Sujitha">
+            <p>N. Sujitha</p>
+          </a>
+          <div class="header--nav-toggle">
+            <span></span>
+          </div>
+        </header>
+        <nav class="l-side-nav">
+          <ul class="side-nav">
+            <li class="is-active"><span>Home</span></li>
+            <li><span>About Me</span></li>
+            <li><span>Education</span></li>
+            <li><span>Skills</span></li>
+            <li><span>Projects</span></li>
+            <li><span>Contact</span></li>
+          </ul>
+        </nav>
+        <ul class="l-main-content main-content">
+          <!-- Home Section -->
+          <li class="l-section section section--is-active">
+            <div class="intro">
+              <div class="intro--banner">
+                <div class="home-content">
+                  <div class="greeting-text">
+                    <h3 class="subtitle">Welcome to my Portfolio</h3>
+                    <h1 class="main-title">N.Sujitha</h1>
+                    <div class="role-wrapper">
+                      <h3 class="role-text">Final Year Statistics Student</h3>
+                    </div>
+                    <p class="intro-description">Passionate about Statistical Analysis</p>
+                    <div class="cta-buttons">
+                      <button class="primary-btn" onclick="document.querySelector('.side-nav li:nth-child(2)').click()">
+                        Explore More
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- About Me Section -->
+          <li class="l-section section">
+            <div class="about">
+              <div class="about--banner">
+                <h2>About Me</h2>
+                <div class="about--content">
+                  <div class="about--text">
+                    <!-- Personal Introduction -->
+                    <div class="about--section">
+                      <h3>Professional Summary</h3>
+                      <p>I am a dedicated Statistics student in my final year at KBN College, Vijayawada, with a strong foundation in statistical analysis and data interpretation. My academic journey has equipped me with practical knowledge in statistical methods, data analysis, and research methodologies.</p>
+                    </div>
+
+                    <!-- Career Objective -->
+                    <div class="about--section">
+                      <h3>Professional Objectives</h3>
+                      <p>As an aspiring Statistician, I am actively seeking opportunities to apply my statistical and analytical skills in a professional environment. My key focus areas include:</p>
+                      <ul class="career-points">
+                        <li>Conducting statistical analysis and hypothesis testing</li>
+                        <li>Applying statistical methods for research and data interpretation</li>
+                        <li>Developing statistical models for data analysis</li>
+                        <li>Creating statistical reports and presentations</li>
+                        <li>Implementing research methodologies and experimental design</li>
+                      </ul>
+                    </div>
+
+                    <!-- Technical Proficiency -->
+                    <div class="about--section">
+                      <h3>Core Competencies</h3>
+                      <p>My technical foundation includes:</p>
+                      <ul class="career-points">
+                        <li>Statistical Analysis & Research Methods</li>
+                        <li>Data Collection & Sampling Techniques</li>
+                        <li>Probability Theory & Statistical Inference</li>
+                        <li>Statistical Software (R, SPSS)</li>
+                        <li>Strong Analytical & Problem-Solving Skills</li>
+                      </ul>
+                      
+                      <!-- Resume Button -->
+                      <div class="resume-options" style="margin-top: 25px; text-align: center;">
+                        <div class="resume-download">
+                          <button class="resume-btn" onclick="window.showResumeModal()">
+                            <i class="fas fa-file-alt"></i>
+                            Resume
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Education Section -->
+          <li class="l-section section">
+            <div class="education">
+              <h2>Education</h2>
+              <div class="education--content">
+                <div class="education--item">
+                  <h3>Bachelor of Science</h3>
+                  <p class="institution">KBN College</p>
+                  <p class="specialization" style="color: #ffffff;">Statistics</p>
+                  <p class="location">Vijayawada, Andhra Pradesh, India</p>
+                  <p class="year">2023 - 2025</p>
+                  <p class="grade">Aggregate: 82%</p>
+                </div>
+                <div class="education--item">
+                  <h3>Intermediate Education</h3>
+                  <p class="institution">Sri Chaitanya College</p>
+                  <p class="location">Vijayawada, Andhra Pradesh, India</p>
+                  <p class="year">2020 - 2022</p>
+                  <p class="grade">Aggregate: 92%</p>
+                </div>
+                <div class="education--item">
+                  <h3>Secondary School Education</h3>
+                  <p class="institution">Sarada Rama Krishna Vidyalaya</p>
+                  <p class="location">Vijayawada, Andhra Pradesh, India</p>
+                  <p class="year">2019 - 2020</p>
+                  <p class="grade">Aggregate: 100%</p>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Skills Section -->
+          <li class="l-section section">
+            <div class="skills-wrapper">
+              <div class="skills">
+                <h2>Skills</h2>
+                <div class="skills--content">
+                  <div class="skills--category">
+                    <h3>Programming & Tools</h3>
+                    <div class="skills--items">
+                      <div class="skill-tag">Basic C</div>
+                      <div class="skill-tag">DBMS</div>
+                      <div class="skill-tag">Basic PHP</div>
+                      <div class="skill-tag">MS Office</div>
+                    </div>
+                  </div>
+                  <div class="skills--category">
+                    <h3>System Knowledge</h3>
+                    <div class="skills--items">
+                      <div class="skill-tag">Basic Operating System</div>
+                      <div class="skill-tag">System Administration</div>
+                      <div class="skill-tag">Computer Networks</div>
+                    </div>
+                  </div>
+                  <div class="skills--category">
+                    <h3>Data Science & Analytics</h3>
+                    <div class="skills--items">
+                      <div class="skill-tag">Data Visualization</div>
+                      <div class="skill-tag">Statistical Analysis</div>
+                      <div class="skill-tag">Data Mining</div>
+                    </div>
+                  </div>
+                  <div class="skills--category">
+                    <h3>Professional Skills</h3>
+                    <div class="skills--items">
+                      <div class="skill-tag">Problem Solving</div>
+                      <div class="skill-tag">Team Collaboration</div>
+                      <div class="skill-tag">Communication</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Projects Section -->
+          <li class="l-section section">
+            <div class="work">
+              <h2>Projects</h2>
+              <div class="work--lockup">
+                <ul class="slider">
+                  <!-- Project 1 -->
+                  <li class="slider--item slider--item-left">
+                    <div class="slider--item-image">
+                      <img src="{{ url_for('static', filename='img/pro1.jpg') }}" alt="Musical Instruments">
+                    </div>
+                    <p class="slider--item-title">Musical Instruments</p>
+                    <p class="slider--item-description">A comprehensive collection of musical instruments, featuring various traditional and modern instruments with detailed information about their history and usage.</p>
+                  </li>
+                  
+                  <!-- Project 2 -->
+                  <li class="slider--item slider--item-center">
+                    <div class="slider--item-image">
+                      <img src="{{ url_for('static', filename='img/pro2.png') }}" alt="CareerHub Application">
+                    </div>
+                    <p class="slider--item-title">CareerHub</p>
+                    <p class="slider--item-description">An interactive job application form system designed to streamline the recruitment process, featuring user-friendly interface and responsive design.</p>
+                  </li>
+
+                  <!-- Project 3 -->
+                  <li class="slider--item slider--item-right" data-project="movie-ticket">
+                    <div class="slider--item-image">
+                      <img src="{{ url_for('static', filename='img/pro4.jpg') }}" alt="Movie Ticket Booking Platform">
+                    </div>
+                    <p class="slider--item-title">Movie Ticket Booking Platform</p>
+                    <p class="slider--item-description">A dynamic movie ticket booking system with real-time seat selection, payment integration, and booking confirmation features. Built using HTML, CSS, and JavaScript.</p>
+                  </li>
+                </ul>
+
+                <div class="slider--prev">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M561,1169C525,1155,10,640,3,612c-3-13,1-36,8-52c8-15,134-145,281-289C527,41,562,10,590,10c22,0,41,9,61,29
+                    c55,55,49,64-163,278L296,510h575c564,0,576,0,597,20c46,43,37,109-18,137c-19,10-159,13-590,13l-565,1l182,180
+                    c101,99,187,188,193,199c16,30,12,57-12,84C631,1174,595,1183,561,1169z"/>
+                  </g>
+                  </svg>
+                </div>
+                <div class="slider--next">
+                  <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 150 118" style="enable-background:new 0 0 150 118;" xml:space="preserve">
+                  <g transform="translate(0.000000,118.000000) scale(0.100000,-0.100000)">
+                    <path d="M870,1167c-34-17-55-57-46-90c3-15,81-100,194-211l187-185l-565-1c-431,0-571-3-590-13c-55-28-64-94-18-137c21-20,33-20,597-20h575l-192-193C800,103,794,94,849,39c20-20,39-29,61-29c28,0,63,30,298,262c147,144,272,271,279,282c30,51,23,60-219,304C947,1180,926,1196,870,1167z"/>
+                  </g>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <!-- Contact Section -->
+          <li class="l-section section">
+            <div class="contact-wrapper">
+              <div class="contact">
+                <h2>Contact Me</h2>
+                <div class="contact-wrapper">
+                  <!-- Contact Form -->
+                  <div class="contact-form">
+                    <form id="contactForm">
+                      <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder="Name*" required>
+                        <span class="error-message" id="nameError"></span>
+                      </div>
+                      <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder="Email*" required>
+                        <span class="error-message" id="emailError"></span>
+                      </div>
+                      <div class="form-group">
+                        <input type="text" name="subject" id="subject" placeholder="Subject">
+                        <span class="error-message" id="subjectError"></span>
+                      </div>
+                      <div class="form-group">
+                        <textarea name="message" id="message" placeholder="Message" rows="5"></textarea>
+                        <span class="error-message" id="messageError"></span>
+                      </div>
+                      <button type="submit" class="submit-btn">
+                        <div class="btn-content">
+                          <span class="btn-text">Send Message</span>
+                          <div class="loading-spinner"></div>
+                        </div>
+                      </button>
+                    </form>
+                  </div>
+
+                  <!-- Contact Information -->
+                  <div class="contact-info">
+                    <h3>N. Sujitha</h3>
+                    
+                    <div class="info-group">
+                      <h4>Phone</h4>
+                      <p>
+                        <!-- Primary link for devices with WhatsApp installed -->
+                        <a href="whatsapp://send?phone=+917675821025&text=Hi%20Sujitha,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you." 
+                           class="whatsapp-link"
+                          onclick="if(!navigator.userAgent.match(/Android|iPhone|iPad|iPod/i)){window.open('https://web.whatsapp.com/send?phone=917675821025&text=Hi%20Sujitha,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect%20with%20you.', '_blank');}return true;">
+                          <i class="fab fa-whatsapp"></i>
+                          +91 7675821025
+                        </a>
+                      </p>
+                    </div>
+
+                    <div class="info-group">
+                      <h4>Email</h4>
+                      <p>
+                        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=nahaksujitha10@gmail.com&su=Portfolio Contact&body=Hi Sujitha," class="email-link" target="_blank">
+                          <i class="far fa-envelope"></i>
+                          nahaksujitha10@gmail.com
+                        </a>
+                      </p>
+                    </div>
+
+                    <!-- Social Links -->
+                    <div class="social-links">
+                      <!-- Removing LinkedIn and GitHub links -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <ul class="outer-nav">
+    <li class="is-active">Home</li>
+    <li>About Me</li>
+    <li>Education</li>
+    <li>Skills</li>
+    <li>Projects</li>
+    <li>Contact</li>
+  </ul>
+</div>
+
+<!-- Update the modal HTML structure -->
+<div id="resumeModal" class="modal-overlay" style="display: none;">
+  <div class="modal-content">
+    <h3>Resume Options</h3>
+    <div class="modal-buttons">
+      <a href="{{ url_for('static', filename='pdf/suji.pdf') }}" class="modal-btn" download>
+        <i class="fas fa-download"></i>
+        Download PDF
+      </a>
+      <a href="{{ url_for('static', filename='pdf/suji.pdf') }}" class="modal-btn" target="_blank">
+        <i class="fas fa-eye"></i>
+        View PDF
+      </a>
+    </div>
+    <button class="modal-close">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script>
+  // Fix jQuery fallback by properly escaping the script tag
+  window.jQuery || document.write('<script src="{{ url_for("static", filename="js/vendor/jquery-2.2.4.min.js") }}"><\/script>');
+</script>
+<script src="{{ url_for('static', filename='js/functions-min.js') }}"></script>
+
+<script>
+// Wrap all JavaScript in a DOMContentLoaded event handler
+document.addEventListener('DOMContentLoaded', function() {
+  
+  // Fix explore button click handler
+  const exploreBtn = document.querySelector('.explore-btn');
+  if (exploreBtn) {
+    exploreBtn.addEventListener('click', function() {
+      const sideNavItems = document.querySelectorAll('.side-nav li');
+      if (sideNavItems[1]) {
+        sideNavItems[1].click();
+      }
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  // Fix side nav click handlers
+  document.querySelectorAll('.side-nav li').forEach((item, index) => {
+    item.addEventListener('click', function() {
+      // Remove active class from all items
+      document.querySelectorAll('.side-nav li').forEach(i => i.classList.remove('is-active'));
+      this.classList.add('is-active');
+
+      // Update outer nav
+      document.querySelectorAll('.outer-nav li').forEach(i => i.classList.remove('is-active'));
+      const outerNavItems = document.querySelectorAll('.outer-nav li');
+      if (outerNavItems[index]) {
+        outerNavItems[index].classList.add('is-active');
+      }
+
+      // Update sections
+      document.querySelectorAll('.section').forEach(section => {
+        section.classList.remove('section--is-active');
+      });
+      const sections = document.querySelectorAll('.section');
+      if (sections[index]) {
+        sections[index].classList.add('section--is-active');
+      }
+    });
+  });
+
+  // Fix outer nav click handlers
+  document.querySelectorAll('.outer-nav li').forEach((item, index) => {
+    item.addEventListener('click', function() {
+      const sideNavItems = document.querySelectorAll('.side-nav li');
+      if (sideNavItems[index]) {
+        sideNavItems[index].click();
+      }
+    });
+  });
+
+  // Show modal function
+  window.showResumeModal = function() {
+    const modal = document.getElementById('resumeModal');
+    if (modal) {
+      modal.style.display = 'flex';
+    }
+  };
+
+  // Close modal handlers
+  const modal = document.getElementById('resumeModal');
+  const closeBtn = document.querySelector('.modal-close');
+
+  if (closeBtn && modal) {
+    // Close on button click
+    closeBtn.addEventListener('click', function() {
+      modal.style.display = 'none';
+    });
+
+    // Close on outside click
+    modal.addEventListener('click', function(e) {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+      }
+    });
+
+    // Prevent modal close when clicking modal content
+    modal.querySelector('.modal-content').addEventListener('click', function(e) {
+      e.stopPropagation();
+    });
+  }
+
+  // Fix error handling
+  function handleError(message) {
+    const errorDiv = document.createElement('div');
+    errorDiv.style.cssText = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 0, 0, 0.8);
+      color: white;
+      padding: 15px 25px;
+      border-radius: 5px;
+      z-index: 9999;
+      animation: fadeInOut 3s forwards;
+    `;
+    errorDiv.textContent = message;
+    document.body.appendChild(errorDiv);
+    
+    setTimeout(() => {
+      errorDiv.remove();
+    }, 3000);
+  }
+
+  // Fix project link error handling
+  document.querySelectorAll('.slider--item a').forEach(link => {
+    link.addEventListener('click', function(e) {
+      try {
+        const href = this.getAttribute('href');
+        if (!href || href === '#') {
+          e.preventDefault();
+          handleError('This feature is currently unavailable. Please try again later.');
+        }
+      } catch (error) {
+        e.preventDefault();
+        handleError('An error occurred. Please try again later.');
+      }
+    });
+  });
+
+  // Fix contact form submission
+  const contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name')?.value || '';
+      const email = document.getElementById('email')?.value || '';
+      const subject = document.getElementById('subject')?.value || '';
+      const message = document.getElementById('message')?.value || '';
+      
+      const emailBody = `Name: ${name}%0D%0A
+Email: ${email}%0D%0A
+Subject: ${subject}%0D%0A
+Message:%0D%0A${message}`;
+      
+      const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=nahaksujitha10@gmail.com&su=${encodeURIComponent(subject)}&body=${emailBody}`;
+      
+      window.open(gmailUrl, '_blank');
+      
+      this.reset();
+      
+      const successMessage = document.createElement('div');
+      successMessage.className = 'success-message';
+      successMessage.textContent = 'Opening Gmail...';
+      document.body.appendChild(successMessage);
+      
+      setTimeout(() => {
+        successMessage.remove();
+      }, 3000);
+    });
+  }
+
+  // Add animation styles
+  const style = document.createElement('style');
+  style.textContent = `
+    @keyframes fadeInOut {
+      0% { opacity: 0; transform: translateX(100%); }
+      15% { opacity: 1; transform: translateX(0); }
+      85% { opacity: 1; transform: translateX(0); }
+      100% { opacity: 0; transform: translateX(100%); }
+    }
+  `;
+  document.head.appendChild(style);
+
+});
+</script>
+</body>
+</html>
